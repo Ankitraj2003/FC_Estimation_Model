@@ -1,0 +1,14 @@
+Event_ID,Column,SAX_Word,LeaveOneEventOut_SAX_Similarity
+5,SM_VWCFinal_125_m3_m3_,eeccbbaa,0.5
+5,SM_VWCFinal1_140_m3_m3_,abaceedd,
+7,SM_VWCFinal_85_m3_m3_,eeddcbaa,0.5
+7,SM_VWCFinal_105_m3_m3_,eeddcbaa,0.625
+16,SM_VWCFinal_85_m3_m3_,decdcdba,0.5
+22,SM_VWCFinal_45_m3_m3_,ceedbbaa,0.625
+22,SM_VWCFinal_50_m3_m3_,acdddddc,0.25
+23,SM_VWCFinal_45_m3_m3_,eedbbbaa,0.625
+23,SM_VWCFinal_50_m3_m3_,edddbaba,0.25
+24,SM_VWCFinal_15_m3_m3_,edccbbba,
+24,SM_VWCFinal_85_m3_m3_,edcbbbba,0.375
+24,SM_VWCFinal_105_m3_m3_,eddcbbaa,0.625
+24,SM_VWCFinal_125_m3_m3_,edcbbbbb,0.5
