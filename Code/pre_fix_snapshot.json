@@ -1,0 +1,15 @@
+{
+  "description": "Preserved pre-fix result snapshot (Phase 2.1 prior to nested out-of-sample SAX correction)",
+  "LOEO_Median_Hybrid_RMSE": 0.0012238866754806614,
+  "LOEO_Median_Hybrid_MAE": 0.00122341303596928,
+  "LOEO_Median_Hybrid_R2": 0.3729513860216683,
+  "Hybrid_Holdout_R2": 0.996182983692521,
+  "Hybrid_Holdout_RMSE": 0.002054593063246225,
+  "Hybrid_Holdout_MAE": 0.0020213464744189974,
+  "SWDP_R_Holdout_R2": 0.9996667590397426,
+  "SWDP_R_Holdout_RMSE": 0.000607075908468602,
+  "SWDP_R_Holdout_MAE": 0.0004923368525008437,
+  "SWDP_R_Holdout_Bias": 0.00045771752927466214,
+  "Number_of_Predictions": 11,
+  "Number_of_Valid_Events": 5
+}

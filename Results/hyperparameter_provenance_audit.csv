@@ -1,0 +1,11 @@
+parameter,value,source,selection_stage,used_holdout_for_selection
+iterations,100,Jiang et al. (2025); Zhou et al. (2025) - a priori regularization,Pre-experimental model definition,False
+learning_rate,0.03,Standard gradient boosting shrinkage rate,Pre-experimental model definition,False
+depth,1,Decision stump regularization for small sample prevention of overfitting,Pre-experimental model definition,False
+l2_leaf_reg,10,Ridge L2 penalty set a priori to prevent residual memorization,Pre-experimental model definition,False
+max_interpolation_gap,2.0 h,Savitzky & Golay (1964) physical sampling density requirement,Pre-experimental preprocessing protocol,False
+ietd_hours,24.0 h,Hydrological event separation standard for storm pulses,Pre-experimental event definition,False
+wetting_threshold,0.006 m3/m3,Bean et al. (2018) Criterion A screening threshold,Pre-experimental cycle screening protocol,False
+rebound_threshold,0.002 m3/m3,Bean et al. (2018) nocturnal decline stability tolerance,Pre-experimental cycle screening protocol,False
+sax_word_length,8,Lin et al. (2007) time-series dimensionality reduction standard,Pre-experimental feature specification,False
+sax_alphabet_size,5,Lin et al. (2007) equiprobable Gaussian slicing,Pre-experimental feature specification,False

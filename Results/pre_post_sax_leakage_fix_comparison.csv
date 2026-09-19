@@ -1,0 +1,14 @@
+Metric_or_Methodological_Dimension,Pre_Fix_Snapshot,Post_Fix_Nested_SAX,Absolute_Change,Methodological_Status
+LOEO CV Median Hybrid RMSE (m³/m³),0.001224,0.001222,-0.000002,Leakage-free cross-validation; zero static global SAX features
+LOEO CV Median Hybrid MAE (m³/m³),0.001223,0.001221,-0.000002,Evaluated with self-excluded training reference libraries
+LOEO CV Median Hybrid R²,0.372951,0.373721,+0.000770,Strict out-of-sample event generalization
+Holdout Hybrid Test RMSE (m³/m³),0.002055,0.002055,-0.000000,Unseen chronological holdout (Event 15)
+Holdout Hybrid Test MAE (m³/m³),0.002021,0.002021,-0.000000,Evaluated on nested out-of-sample SAX features
+Holdout Hybrid Test R²,0.996183,0.996183,+0.000000,Preserved exceptional physical tracking
+Holdout SWDP-R Physics Baseline RMSE (m³/m³),0.000607,0.000607,-0.000000,Unchanged physics baseline anchor (Bean et al. 2018)
+SAX Training Feature Construction,Global static Hamming similarity from all-event library,Nested fold-specific out-of-sample SAX with self-exclusion,Eliminated global feature leakage,Zero global SAX columns present in ML base matrices
+Training Event Self-Similarity Bias,"Unmitigated (event queried itself in library, similarity=1.0)",Eliminated (event E queries library of train \ {E}),Removed artificial 1.0 similarity inflation,Training events receive realistic out-of-sample similarity
+SAX Validation Feature Construction,Dynamic query against training library (asymmetrical with X_train),Nested fold-specific out-of-sample query against all eligible train events,Training features are nested out-of-sample; validation features use the outer training library,Mathematical parity between train and test feature spaces
+Empty Reference Library Imputation,Automatic fallback to dataset median similarity,Explicit NaN / insufficient_reference_library (no automatic median imputation),Removed heuristic median imputation,CatBoost native missing value handling (zero synthetic data)
+Short Cycle Series (< Word Length),"Artificial ""aaaa..."" padding or arbitrary fallback",Explicit None / NaN,Zero artificial SAX words generated,Maintains strict biological/physical series representation
+Deliberate Negative Leakage Constructor Test,None (only post-hoc CSV inspection),Passed (constructor raises AssertionError on corrupted inputs),Active architectural leakage guard,Verified in 05_leakage_audit.py Test 7

@@ -1,0 +1,10 @@
+Feature,Source_Function,Calculation_Dependency,Available_At_Prediction,Direct_Target_Derived,Indirect_Target_Derived,Uses_Future_Data,Status
+Depth_cm,parse_depth(Column),Sensor installation depth metadata,Yes (Sensor setup),False,False,False,APPROVED
+Pre_Event_VMC,02_event_detection.py / baseline_window,Median VMC of 6 hours preceding wetting onset,Yes (Prior to rainfall/irrigation),False,False,False,APPROVED
+Peak_VMC,02_event_detection.py / find_peaks,Maximum post-wetting smoothed VMC,Yes (At recession onset),False,False,False,APPROVED
+Total_Water_mm,02_event_detection.py / detect_events,Sum of irrigation + precipitation during event pulse,Yes (At wetting cessation),False,False,False,APPROVED
+VMC_Rise,Peak_VMC - Pre_Event_VMC,Wetting magnitude between baseline and peak,Yes (At recession onset),False,False,False,APPROVED
+Initial_Drainage_Rate,04_fc_estimation_catboost.py / build_base_feature_dataset,(Peak_VMC - VMC_3h) / 3.0 h,Yes (First 3h of recession only),False,False,False,APPROVED
+Peak_Hour,pd.to_datetime(Peak_Time).dt.hour,Hour of day corresponding to wetting peak,Yes (At recession onset),False,False,False,APPROVED
+Month,pd.to_datetime(Peak_Time).dt.month,Seasonal calendar month of event onset,Yes (At event onset),False,False,False,APPROVED
+LOEO_SAX_Hamming_Similarity,04_fc_estimation_catboost.py / construct_nested_fold_sax,Nested Out-of-Sample SAX Hamming similarity against fold-isolated reference library,Yes (Derived strictly from out-of-sample training fold cycles),False,False,False,APPROVED
